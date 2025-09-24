@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Star Wars Galaxy: ISB HoloNet Terminal
 
-## Getting Started
+> **Imperial Security Bureau Technical Assessment**
+> _Simulate a slicer's experience accessing the HoloNet Terminal._
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This interactive application places you in the role of an Imperial officer, tasked with querying the Holocron Archives for film intel and scanning the personnel database for Rebel assets.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The UI/UX draws inspiration from the gritty, tactical, and retro-futuristic aesthetic of classic real-time strategy games like **Command & Conquer: Red Alert 2**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🗒️ Mission Directives (Features)
 
-To learn more about Next.js, take a look at the following resources:
+- **Access Holocron Film Archives**
+  _Display a complete list of all films, including titles and a truncated opening crawl (128 characters) as a data preview._
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Decrypt Film Dossiers**
+  _View a detailed data readout for a selected film, including its full opening crawl, production details, and a list of all known personnel linked to the event._
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Scan Personnel Database**
+  _Browse a paginated list of known persons of interest from across the galaxy._
 
-## Deploy on Vercel
+- **Initiate Long-Range Scan**
+  _Use the debounced search terminal to run a targeted query for specific personnel by name. The 1-second debounce simulates interstellar query latency._
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Review Personnel Dossiers**
+  _Access the detailed file for a specific character, presenting all known physical and biographical data, along with a list of their confirmed appearances in film records._
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🛠️ Imperial Protocols (Tech Stack)
+
+| Directive         | Implementation                                    |
+|-------------------|---------------------------------------------------|
+| **Framework**   | Next.js 15 (App Router)                             |
+| **Language**    | TypeScript                                          |
+| **UI Library**  | React                                               |
+| **Styling**     | Tailwind CSS (utility-first, tactical design)       |
+| **Data Fetching** | Direct, un-authenticated API calls to SWAPI       |
+| **Testing**     | Jest                                                |
+| **Accessibility** | Keyboard-navigable, WCAG 2.2 AA color contrast    |
+
+---
+
+## 🚀 System Access (Getting Started)
+
+1. **Clone the Repository**
+    ```sh
+    git clone https://github.com/sunny-github-acc/star-wars-galaxy
+    cd star-wars-galaxy
+    ```
+
+2. **Install Dependencies**
+    ```sh
+    npm install
+    ```
+
+3. **Run the Development Server**
+    ```sh
+    npm run dev
+    ```
+
+4. **Initialize the HoloNet Connection**
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+   The application will auto-update as you modify the source files.
+
+---
+
+> _All interfaces are designed for accessibility and tactical efficiency. May the Force serve the Empire!_
