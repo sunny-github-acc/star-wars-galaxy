@@ -1,11 +1,19 @@
 import Link from 'next/link';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const main = (isBig: boolean) => (
+    <main
+      className={`${
+        isBig ? 'hidden md:block' : 'block md:hidden'
+      } flex-1 p-4 md:p-8 overflow-y-auto`}
+    >
+      {children}
+    </main>
+  );
+
   return (
     <div className='flex flex-col md:flex-row h-screen'>
-      <main className='flex-1 p-4 md:p-8 overflow-y-auto'>
-        {children}
-      </main>
+      {main(true)}
 
       <aside
         className={
@@ -29,6 +37,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </Link>
         </nav>
       </aside>
+
+      {main(false)}
     </div>
   );
 }
